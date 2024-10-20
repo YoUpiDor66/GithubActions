@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: test-report
-        path: report.html
+        path: report.sh
 
     - name: Upload code
       if: success()
