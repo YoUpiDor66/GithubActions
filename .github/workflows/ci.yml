@@ -28,14 +28,13 @@ jobs:
 
     - name: Run tests
       run: |
-        chmod +x run_tests.sh
-        ./run_tests.sh
+        pytest --html=report.html --self-contained-html
 
     - name: Upload test report
       uses: actions/upload-artifact@v3
       with:
         name: test-report
-        path: report.sh
+        path: report.html
 
     - name: Upload code
       if: success()
