@@ -33,14 +33,14 @@ jobs:
 
     - name: Upload test report
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: test-report
         path: report.html
 
     - name: Upload code artifact
       if: success()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3  
       with:
         name: source-code
         path: .
